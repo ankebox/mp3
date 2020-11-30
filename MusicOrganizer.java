@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+ import java.util.ArrayList;
 
 /**
  * A class to hold details of audio files.
@@ -89,6 +89,14 @@ public class MusicOrganizer
             position = position + 1;
             System.out.println(position + ":" + filename);
             
+        }
+    }
+    
+    public void listMatching(String searchString) {
+        for (String filename : files) {
+            if (filename.contains(searchString)) {
+                System.out.println(filename);
+            }
         }
     }
 }
