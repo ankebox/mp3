@@ -97,6 +97,9 @@ public class MusicOrganizer
             if (filename.contains(searchString)) {
                 System.out.println(filename);
             }
+            else{
+                System.out.println("Error de busqueda ----->" + searchString + ": texto no encontrado");
+            }
         }
     }
 }
