@@ -102,4 +102,12 @@ public class MusicOrganizer
             }
         }
     }
+    
+    public void playSampleArtist(String searchString) {
+        for (String filename : files) {
+            if ( filename.contains(searchString)){
+                player. playSample(filename);
+            }
+        }
+    }
 }
