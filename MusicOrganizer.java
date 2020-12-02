@@ -97,17 +97,14 @@ public class MusicOrganizer
         for (String filename : files) {
             if (filename.contains(searchString)) {
                 System.out.println(filename);
-            }
-            else{
                 cancionEncontrada = false;
+            
             }
         }
         
-        if (cancionEncontrada == false) {
+        if (cancionEncontrada == true) {
             System.out.println("Error de busqueda ----->" + searchString + ": texto no encontrado");
         }
-        
-       
     }
     
     public void playSampleArtist(String searchString) {
