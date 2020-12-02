@@ -93,12 +93,21 @@ public class MusicOrganizer
     }
     
     public void listMatching(String searchString) {
+        boolean cancionEncontrada = true;
         for (String filename : files) {
             if (filename.contains(searchString)) {
                 System.out.println(filename);
             }
+            else{
+                cancionEncontrada = false;
+            }
         }
-        System.out.println("Error de busqueda ----->" + searchString + ": texto no encontrado");
+        
+        if (cancionEncontrada == false) {
+            System.out.println("Error de busqueda ----->" + searchString + ": texto no encontrado");
+        }
+        
+       
     }
     
     public void playSampleArtist(String searchString) {
