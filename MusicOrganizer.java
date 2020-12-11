@@ -126,5 +126,22 @@ public class MusicOrganizer
             }
         }
     }
+       
+    public int findFirst(String searchString) {
+        int contador = 0 ;
+        boolean searching = true;
+        String contenedor = "";
+        int aDevolver = -1;
+        while (contador < files.size() && searching == true){
+            contenedor = files.get(contador);
+            if (contenedor.contains(searchString)){
+                
+                searching = false;
+                aDevolver = contador;
+            }
+            contador = contador + 1;
+        }
         
+        return aDevolver;
+    }
 }
